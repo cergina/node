@@ -1,0 +1,19 @@
+{
+  "name": "restapiexpressmongodb",
+  "version": "1.0.0",
+  "description": "just a test project for Rest API with Mongo DB and Express server",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "author": "Maros Cerget",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.5"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.12"
+  }
+}
