@@ -34,9 +34,9 @@ const precipitationElement = document.querySelector('[data-precipitation]')
 function setWeatherData(data, place) {
     locationElement.textContent = place
     statusElement.textContent = data.current.weather_descriptions[0]
-    windElement.textContent = data.current.wind_speed
-    temperatureElement.textContent = data.current.temperature
-    precipitationElement.textContent = `${data.current.precip * 100}%`
+    windElement.textContent = data.current.wind_speed + ' m/s'
+    temperatureElement.textContent = data.current.temperature + ' °C'
+    precipitationElement.textContent = `${data.current.precip} mm`//`${data.current.precip * 100}%`
 
     
     var img=new Image();

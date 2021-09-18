@@ -33,7 +33,9 @@ app.post('/weather', (req, res) => {
 
     console.log(req.body.query)
     
-    axios.get(`http://api.weatherstack.com/current?access_key=${WEATHERSTACK_API_KEY}&query=${req.body.query}&units=m`)
+    var uri = `http://api.weatherstack.com/current?access_key=${WEATHERSTACK_API_KEY}&query=${req.body.query}&units=m`
+    var uriRes = encodeURI(uri)
+    axios.get(uriRes)
         .then(r => res.json(r.data)) // ta tuto do horneho resu json ako keby write (r.data)
         .catch(error => {
             console.log(error);
